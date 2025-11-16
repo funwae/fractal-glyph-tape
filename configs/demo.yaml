@@ -1,0 +1,165 @@
+# Demo configuration for Fractal Glyph Tape Phase 0 prototype
+# This config targets ~100k phrases and 10k clusters for initial testing
+
+project_name: "fgt_demo_v1"
+random_seed: 42
+
+# Data ingestion settings
+ingest:
+  input_path: "data/raw"
+  output_path: "data/phrases.jsonl"
+  min_tokens: 3
+  max_tokens: 50
+  languages:
+    - "en"  # Start with English only, add multilingual in Phase 3
+  target_phrase_count: 100000
+
+  # Sentence segmentation
+  segmenter:
+    method: "nltk"  # or "spacy", "regex"
+    language: "english"
+
+  # Filtering
+  filters:
+    min_length: 10  # characters
+    max_length: 500
+    remove_duplicates: true
+
+# Embedding settings
+embed:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"  # Fast, 384-dim
+  # Alternative models:
+  # - "sentence-transformers/all-mpnet-base-v2"  # Better quality, 768-dim
+  # - "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"  # For multilingual
+
+  batch_size: 128
+  device: "cuda"  # or "cpu" if no GPU available
+  max_seq_length: 256
+
+  # Output
+  output_path: "embeddings/demo_v1"
+  shard_size: 10000  # phrases per shard
+  save_format: "npy"  # or "pt" for PyTorch
+
+# Clustering settings
+cluster:
+  method: "minibatch_kmeans"  # Fast for large datasets
+  n_clusters: 10000  # ~100k phrases / 10 phrases per cluster
+
+  # Algorithm parameters
+  batch_size: 1000
+  max_iter: 100
+  n_init: 3
+
+  # Input/output
+  embeddings_path: "embeddings/demo_v1"
+  output_path: "clusters/demo_v1"
+
+  # Post-processing
+  compute_coherence: true
+  extract_examples: true
+  examples_per_cluster: 5
+
+# Cluster metadata extraction
+metadata:
+  top_phrases_per_cluster: 10
+  compute_statistics: true
+  stats_include:
+    - size
+    - centroid_norm
+    - intra_cluster_distance
+    - coherence_score
+
+# Glyph assignment settings
+glyph:
+  # Mandarin character alphabet (selected for visual distinctiveness)
+  alphabet_path: "src/glyph/mandarin_alphabet.txt"
+
+  # If alphabet file doesn't exist, use this default set
+  # (3000 common characters, easily expandable)
+  default_alphabet_size: 3000
+
+  # Encoding parameters
+  max_glyph_length: 4  # 1-4 character glyph IDs
+  encoding_base: null  # auto-detect from alphabet size
+
+  # Output
+  output_path: "clusters/demo_v1/glyph_mapping.msgpack"
+
+# Fractal tape builder settings
+tape:
+  # Dimensionality reduction for 2D projection
+  projection_method: "umap"  # or "pca", "tsne"
+  projection_dims: 2
+
+  # UMAP parameters (if using UMAP)
+  umap:
+    n_neighbors: 15
+    min_dist: 0.1
+    metric: "cosine"
+    random_state: 42
+
+  # PCA parameters (if using PCA - faster but less semantic)
+  pca:
+    random_state: 42
+
+  # Fractal addressing
+  fractal_type: "triangular"  # Sierpiński-like subdivision
+  max_depth: 10  # Address depth (controls granularity)
+
+  # Storage
+  output_path: "tape/v1"
+  storage_format: "sqlite"  # or "msgpack", "hdf5"
+
+  # Indexing
+  create_indexes: true
+  index_types:
+    - "glyph_id"
+    - "cluster_id"
+    - "fractal_address"
+
+# Evaluation settings
+eval:
+  test_phrases_path: "data/test_phrases.jsonl"
+  test_size: 1000  # number of test phrases
+
+  # Metrics to compute
+  metrics:
+    - compression_ratio
+    - reconstruction_quality
+    - cluster_coherence
+    - glyph_distribution
+
+  # Reconstruction evaluation
+  reconstruction:
+    method: "nearest_centroid"  # or "sample_from_cluster"
+    similarity_metric: "cosine"  # for embedding comparison
+
+  # Output
+  results_path: "results/demo_v1"
+  save_plots: true
+  plot_format: "png"
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  output_path: "logs/fgt_build.log"
+  console_output: true
+
+  # What to log
+  log_progress: true
+  log_statistics: true
+  log_examples: true
+  examples_count: 5
+
+# Resource limits (optional)
+resources:
+  max_memory_gb: 16
+  gpu_memory_fraction: 0.8
+  num_workers: 4  # for parallel processing
+
+# Experimental features (Phase 2+)
+experimental:
+  enable_hybrid_tokenizer: false
+  enable_cross_lingual: false
+  enable_online_updates: false
