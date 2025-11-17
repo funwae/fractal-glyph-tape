@@ -1,0 +1,119 @@
+labels: [collaboration, research]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🤝 Research Collaboration
+
+        Interested in collaborating on Fractal Glyph Tape research? Let's connect!
+
+        This could be:
+        - Joint experiments
+        - Co-authoring papers
+        - Dataset sharing
+        - Benchmark development
+        - Extension of FGT to new domains
+        - Integration with your research
+
+  - type: input
+    id: name
+    attributes:
+      label: Name/Affiliation
+      description: Who are you?
+      placeholder: "Dr. Jane Smith, XYZ University / ABC Research Lab"
+    validations:
+      required: true
+
+  - type: textarea
+    id: research-area
+    attributes:
+      label: Your Research Area
+      description: What do you work on?
+      placeholder: |
+        Research interests:
+        Relevant publications:
+        Current projects:
+    validations:
+      required: true
+
+  - type: textarea
+    id: collaboration-idea
+    attributes:
+      label: Collaboration Proposal
+      description: What would you like to collaborate on?
+      placeholder: |
+        What specific collaboration are you proposing?
+        What resources can you contribute?
+        What timeline are you thinking?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: collaboration-type
+    attributes:
+      label: Type of Collaboration
+      multiple: true
+      options:
+        - Joint experiments
+        - Co-authoring paper
+        - Dataset sharing
+        - Code contribution
+        - Benchmark development
+        - Use case validation
+        - Theoretical analysis
+        - Other
+
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: Timeline
+      options:
+        - Immediate (this month)
+        - Short-term (1-3 months)
+        - Medium-term (3-6 months)
+        - Long-term (6+ months)
+        - Flexible
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources Available
+      description: What can you bring to the collaboration?
+      placeholder: |
+        Computational resources:
+        Datasets:
+        Expertise:
+        Funding:
+        Other:
+
+  - type: textarea
+    id: contact
+    attributes:
+      label: Contact Information
+      description: How should we reach you?
+      placeholder: |
+        Email:
+        Website:
+        GitHub:
+        Other:
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: openness
+    attributes:
+      label: Collaboration Preferences
+      options:
+        - label: Open to public collaboration (visible to community)
+        - label: Interested in publishing results
+        - label: Can provide compute/data resources
+        - label: Available for regular meetings
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        Thanks for your interest in collaborating! We'll reach out soon to discuss further.
+
+        For urgent collaboration inquiries, email: contact@glyphd.com

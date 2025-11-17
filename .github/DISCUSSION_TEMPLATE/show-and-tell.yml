@@ -1,0 +1,100 @@
+labels: [show-and-tell]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎉 Show and Tell
+
+        Built something cool with Fractal Glyph Tape? Share it here!
+
+        This could be:
+        - Experiments you've run
+        - Novel applications or use cases
+        - Modifications or extensions
+        - Visualizations or demos
+        - Integration with other tools
+        - Performance benchmarks
+        - Interesting findings
+
+  - type: input
+    id: title
+    attributes:
+      label: Project/Experiment Title
+      description: Give your work a catchy title
+      placeholder: "e.g., 'Hierarchical Glyph Clustering for Medical Text' or 'FGT on Wikipedia: 10M Phrases'"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What did you build/discover?
+      description: Describe your work
+      placeholder: |
+        What did you do?
+        What were the results?
+        What did you learn?
+    validations:
+      required: true
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Methodology
+      description: How did you do it?
+      placeholder: |
+        Dataset used:
+        Modifications to FGT:
+        Evaluation approach:
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Share your findings, metrics, or outputs
+      placeholder: |
+        Quantitative results:
+        Qualitative observations:
+        Interesting examples:
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: Share relevant links (code, notebooks, papers, demos)
+      placeholder: |
+        GitHub repo:
+        Colab notebook:
+        Demo:
+        Paper:
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      multiple: true
+      options:
+        - Experiment
+        - Application
+        - Extension
+        - Benchmark
+        - Visualization
+        - Tutorial
+        - Research
+        - Other
+
+  - type: checkboxes
+    id: sharing
+    attributes:
+      label: Code/Data Availability
+      options:
+        - label: Code is publicly available
+        - label: Data/results are publicly available
+        - label: Open to collaboration
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        Thanks for sharing your work with the community! 🎉

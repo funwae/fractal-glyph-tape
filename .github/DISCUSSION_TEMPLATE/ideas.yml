@@ -1,0 +1,79 @@
+labels: [enhancement, discussion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Share Your Idea
+
+        Have an idea for improving Fractal Glyph Tape? We'd love to hear it!
+
+        This could be:
+        - New features or capabilities
+        - Alternative algorithms or approaches
+        - Improvements to existing components
+        - Novel use cases
+        - Integration ideas
+
+  - type: textarea
+    id: idea-description
+    attributes:
+      label: Idea Description
+      description: Describe your idea in detail
+      placeholder: |
+        What is your idea? How would it improve FGT?
+
+        Example: "Use hierarchical clustering instead of flat k-means to create multi-level phrase families..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this idea valuable? What problem does it solve?
+      placeholder: |
+        Why should we implement this?
+        What benefits would it provide?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered other approaches?
+      placeholder: |
+        What other solutions exist?
+        Why is your approach better?
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which component does this affect?
+      multiple: true
+      options:
+        - Ingestion pipeline
+        - Embedding service
+        - Clustering algorithms
+        - Glyph encoding
+        - Fractal addressing
+        - Hybrid tokenizer
+        - LLM adapter
+        - Visualization
+        - Experiments
+        - Documentation
+        - Other
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Are you interested in implementing this?
+      options:
+        - label: I'd like to implement this idea myself
+        - label: I'd like to collaborate on implementation
+        - label: I'm just sharing the idea for others to implement
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        Thanks for sharing your idea! The community will discuss and provide feedback.

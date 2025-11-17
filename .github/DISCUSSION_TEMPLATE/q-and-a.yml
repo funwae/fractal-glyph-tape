@@ -1,0 +1,70 @@
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ❓ Question
+
+        Have a question about Fractal Glyph Tape? Ask here!
+
+        Before posting:
+        - Check the [documentation](https://github.com/funwae/fractal-glyph-tape/tree/main/docs)
+        - Search existing discussions and issues
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: |
+        Be as specific as possible. Include:
+        - What you're trying to do
+        - What you've tried
+        - Where you're stuck
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      options:
+        - Installation/Setup
+        - Usage/How-to
+        - Architecture/Design
+        - Performance
+        - Algorithms
+        - Integration
+        - Research/Theory
+        - Other
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Provide any relevant context
+      placeholder: |
+        Environment:
+        - OS:
+        - Python version:
+        - GPU/CPU:
+
+        Error messages (if applicable):
+
+        Code snippets (if applicable):
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I've checked the documentation
+        - label: I've searched existing discussions
+        - label: I've provided enough context for others to help
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        The community will help answer your question. Please be patient and provide additional details if requested.

@@ -1,32 +1,41 @@
 # Fractal Glyph Tape (FGT)
 
+> A fractal-addressable phrase memory that makes language **denser**, **more cross-lingual**, and **more explorable** for LLMs.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Status: Research Prototype](https://img.shields.io/badge/status-research%20prototype-orange.svg)]()
 
-> A fractal-addressable phrase memory system that uses Mandarin characters as a pure glyph library for semantic compression and cross-lingual understanding.
+Fractal Glyph Tape (FGT) is a research prototype from **Glyphd Labs** that adds a new layer beneath large language models:
 
-## What is Fractal Glyph Tape?
+- It clusters similar sentences and phrases into **phrase families**.
+- It assigns each family a compact **glyph ID** built from Mandarin characters used purely as **glyphs** (no native semantics).
+- It places these glyph IDs onto a **fractal tape**—a recursive triangular address space that preserves semantic neighborhoods.
 
-Fractal Glyph Tape (FGT) is a novel approach to language representation that addresses fundamental inefficiencies in how we store, process, and reason about text:
+Text can then be represented as a **hybrid** of:
 
-- **Phrase-level compression**: Instead of treating repeated phrases as separate data, FGT clusters similar phrases into "families" and assigns each family a short, reusable glyph ID.
-- **Fractal organization**: Glyph IDs are placed on a structured, multi-scale address space where nearby addresses = semantically related phrases.
-- **Cross-lingual bridging**: Equivalent phrases across languages (English, Chinese, Spanish, etc.) share the same glyph ID, enabling language-agnostic retrieval and reasoning.
-- **LLM context extension**: By encoding text as glyph sequences, the same token budget carries 3-5x more semantic content.
+- normal tokens, and
+- **glyph tokens** that act as pointers into a shared phrase memory.
 
-### The Core Innovation
+LLMs can be trained or adapted to **read and write this inner code**, enabling:
 
-```
-"Can you send me that file?"     ──┐
-"Mind emailing me the document?" ──├─→ Cluster → Glyph ID: 谷阜 → Fractal Address: L-R-C-L
-"Could you share the file?"      ──┘
+- 📦 **Semantic compression** – smaller corpora and logs with reconstructable meaning
+- 🧠 **Effective context extension** – more usable signal per token under fixed context windows
+- 🌍 **Cross-lingual bridging** – shared glyph IDs for phrase families spanning multiple languages
+- 🔍 **Explorable phrase space** – an interactive fractal map of "things we say"
 
-Instead of storing these phrases separately 1M times,
-we store ONE cluster with examples + ONE short glyph code.
-```
+## What's in this repo?
 
-**Key insight**: Mandarin characters are used purely as **visual symbols** (not for their linguistic meaning), providing a dense, compact alphabet for encoding phrase families.
+- ✅ **Ingestion pipeline** – from raw text to structured phrases
+- ✅ **Multilingual embeddings & clustering** – phrase families with rich metadata
+- ✅ **Glyph encoding system** – integer glyph IDs → Mandarin glyph strings
+- ✅ **Fractal tape builder** – 2D projection + recursive triangular addressing
+- ✅ **Hybrid tokenizer** – wraps a base tokenizer with glyph-aware spans
+- ✅ **LLM adapter** – training & inference helpers for glyph-aware models
+- ✅ **Visualization API** – backend for a fractal phrase-map web UI
+- ✅ **Experiment scripts** – compression, context, and cross-lingual evaluations
+
+See [`docs/README.md`](docs/README.md) for the full technical spec.
 
 ## Features
 
@@ -37,49 +46,28 @@ we store ONE cluster with examples + ONE short glyph code.
 - 🔧 **Hybrid tokenization** that augments (not replaces) existing tokenizers
 - 🚀 **Training efficiency gains** by structuring phrase redundancy
 
-## Quick Start
-
-### Installation
+## Quickstart
 
 ```bash
-# Clone the repository
-git clone https://github.com/funwae/fractal-glyph-tape.git
-cd fractal-glyph-tape
-
-# Install dependencies
+# 1) Create environment
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Install the package
-pip install -e .
-```
-
-### Build Your First Tape
-
-```bash
-# Run the full pipeline on demo data
+# 2) Build a demo tape
 python scripts/run_full_build.py --config configs/demo.yaml
-```
 
-This will:
-1. Ingest phrases from sample corpus
-2. Generate embeddings
-3. Cluster into phrase families
-4. Assign glyph IDs
-5. Build fractal tape storage
-6. Run basic evaluation metrics
-
-### Use the CLI
-
-```bash
-# Encode text to glyph representation
+# 3) Try the CLI
 echo "Can you send me that file?" | fgt encode
-
-# Decode glyph back to text
 echo "谷阜" | fgt decode
 
-# Inspect a glyph cluster
-fgt inspect-glyph 谷阜
+# 4) Launch the visualizer
+uvicorn fgt.viz.app:app --reload
 ```
+
+---
+
+FGT is **research software**: we invite feedback, experiments, and extensions.
+If you're working on tokenization, compression, or cross-lingual LLMs, this is for you.
 
 ## How It Works
 
