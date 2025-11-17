@@ -1,0 +1,1415 @@
+{
+  "timestamp": "2025-11-17T20:35:16.254668",
+  "dataset": "data/phase5/dialog_test.jsonl",
+  "num_episodes": 15,
+  "token_budgets": [
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "fgms_available": true,
+  "note": "Standalone benchmark with simulated foveation strategy",
+  "results": [
+    {
+      "token_budget": 256,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 4,
+        "total_tokens": 3640,
+        "avg_completeness": 0.8374804705449869,
+        "avg_tokens": 242.66666666666666,
+        "success_rate": 0.26666666666666666
+      },
+      "fgt_foveated": {
+        "correct": 11,
+        "total_tokens": 2907,
+        "avg_completeness": 0.6560097384694159,
+        "avg_tokens": 193.8,
+        "success_rate": 0.7333333333333333
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0009",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 255,
+            "turns_retrieved": 48,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.9230769230769231
+          },
+          "fgt_foveated": {
+            "tokens": 204,
+            "turns_retrieved": 37,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 0.7115384615384616
+          }
+        },
+        {
+          "episode_id": "ep_0050",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 253,
+            "turns_retrieved": 44,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.8461538461538461
+          },
+          "fgt_foveated": {
+            "tokens": 209,
+            "turns_retrieved": 35,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.6730769230769231
+          }
+        },
+        {
+          "episode_id": "ep_0081",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 252,
+            "turns_retrieved": 45,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.625
+          },
+          "fgt_foveated": {
+            "tokens": 201,
+            "turns_retrieved": 34,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 0.4722222222222222
+          }
+        },
+        {
+          "episode_id": "ep_0017",
+          "question": "What did I say we need for user engagement?",
+          "answer": "real-time notifications",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 256,
+            "turns_retrieved": 46,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.8846153846153846
+          },
+          "fgt_foveated": {
+            "tokens": 210,
+            "turns_retrieved": 37,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.7115384615384616
+          }
+        },
+        {
+          "episode_id": "ep_0064",
+          "question": "What feature did I request for security?",
+          "answer": "2FA authentication",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 174,
+            "turns_retrieved": 30,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.7142857142857143
+          }
+        },
+        {
+          "episode_id": "ep_0012",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0074",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 254,
+            "turns_retrieved": 44,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.7096774193548387
+          },
+          "fgt_foveated": {
+            "tokens": 211,
+            "turns_retrieved": 35,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.5645161290322581
+          }
+        },
+        {
+          "episode_id": "ep_0010",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 254,
+            "turns_retrieved": 47,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.9038461538461539
+          },
+          "fgt_foveated": {
+            "tokens": 208,
+            "turns_retrieved": 37,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 0.7115384615384616
+          }
+        },
+        {
+          "episode_id": "ep_0058",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 254,
+            "turns_retrieved": 46,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.8846153846153846
+          },
+          "fgt_foveated": {
+            "tokens": 199,
+            "turns_retrieved": 35,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 0.6730769230769231
+          }
+        },
+        {
+          "episode_id": "ep_0047",
+          "question": "What feature did I request for internationalization?",
+          "answer": "multi-language support",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 172,
+            "turns_retrieved": 30,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.7142857142857143
+          }
+        },
+        {
+          "episode_id": "ep_0089",
+          "question": "Which feature was required?",
+          "answer": "real-time notifications",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 133,
+            "turns_retrieved": 23,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.71875
+          }
+        },
+        {
+          "episode_id": "ep_0052",
+          "question": "Which deployment tool did we decide on earlier?",
+          "answer": "Docker",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 253,
+            "turns_retrieved": 44,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.8461538461538461
+          },
+          "fgt_foveated": {
+            "tokens": 202,
+            "turns_retrieved": 35,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.6730769230769231
+          }
+        },
+        {
+          "episode_id": "ep_0066",
+          "question": "What did I say we need for compliance?",
+          "answer": "data export functionality",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 254,
+            "turns_retrieved": 47,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.6527777777777778
+          },
+          "fgt_foveated": {
+            "tokens": 203,
+            "turns_retrieved": 37,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.5138888888888888
+          }
+        },
+        {
+          "episode_id": "ep_0029",
+          "question": "What was my platform choice?",
+          "answer": "AWS Lambda",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 251,
+            "turns_retrieved": 41,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.6612903225806451
+          },
+          "fgt_foveated": {
+            "tokens": 194,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.5161290322580645
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 254,
+            "turns_retrieved": 45,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": false,
+            "completeness": 0.625
+          },
+          "fgt_foveated": {
+            "tokens": 207,
+            "turns_retrieved": 34,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.4722222222222222
+          }
+        }
+      ]
+    },
+    {
+      "token_budget": 512,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 11,
+        "total_tokens": 4556,
+        "avg_completeness": 1.0,
+        "avg_tokens": 303.73333333333335,
+        "success_rate": 0.7333333333333333
+      },
+      "fgt_foveated": {
+        "correct": 11,
+        "total_tokens": 4324,
+        "avg_completeness": 0.9571983273596177,
+        "avg_tokens": 288.26666666666665,
+        "success_rate": 0.7333333333333333
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0009",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 279,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 279,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0050",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 310,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 310,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0081",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 402,
+            "turns_retrieved": 72,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 363,
+            "turns_retrieved": 64,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 0.8888888888888888
+          }
+        },
+        {
+          "episode_id": "ep_0017",
+          "question": "What did I say we need for user engagement?",
+          "answer": "real-time notifications",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 293,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 293,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0064",
+          "question": "What feature did I request for security?",
+          "answer": "2FA authentication",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0012",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0074",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 366,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 332,
+            "turns_retrieved": 56,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.9032258064516129
+          }
+        },
+        {
+          "episode_id": "ep_0010",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 284,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 284,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0058",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 286,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 286,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0047",
+          "question": "What feature did I request for internationalization?",
+          "answer": "multi-language support",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0089",
+          "question": "Which feature was required?",
+          "answer": "real-time notifications",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0052",
+          "question": "Which deployment tool did we decide on earlier?",
+          "answer": "Docker",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 298,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 298,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0066",
+          "question": "What did I say we need for compliance?",
+          "answer": "data export functionality",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 393,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 362,
+            "turns_retrieved": 65,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.9027777777777778
+          }
+        },
+        {
+          "episode_id": "ep_0029",
+          "question": "What was my platform choice?",
+          "answer": "AWS Lambda",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 380,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 296,
+            "turns_retrieved": 48,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.7741935483870968
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 415,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 371,
+            "turns_retrieved": 64,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 0.8888888888888888
+          }
+        }
+      ]
+    },
+    {
+      "token_budget": 1024,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 11,
+        "total_tokens": 4556,
+        "avg_completeness": 1.0,
+        "avg_tokens": 303.73333333333335,
+        "success_rate": 0.7333333333333333
+      },
+      "fgt_foveated": {
+        "correct": 11,
+        "total_tokens": 4556,
+        "avg_completeness": 1.0,
+        "avg_tokens": 303.73333333333335,
+        "success_rate": 0.7333333333333333
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0009",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 279,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 279,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0050",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 310,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 310,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0081",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 402,
+            "turns_retrieved": 72,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 402,
+            "turns_retrieved": 72,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0017",
+          "question": "What did I say we need for user engagement?",
+          "answer": "real-time notifications",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 293,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 293,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0064",
+          "question": "What feature did I request for security?",
+          "answer": "2FA authentication",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0012",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0074",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 366,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 366,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0010",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 284,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 284,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0058",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 286,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 286,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0047",
+          "question": "What feature did I request for internationalization?",
+          "answer": "multi-language support",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0089",
+          "question": "Which feature was required?",
+          "answer": "real-time notifications",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0052",
+          "question": "Which deployment tool did we decide on earlier?",
+          "answer": "Docker",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 298,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 298,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0066",
+          "question": "What did I say we need for compliance?",
+          "answer": "data export functionality",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 393,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 393,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0029",
+          "question": "What was my platform choice?",
+          "answer": "AWS Lambda",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 380,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 380,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 415,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 415,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "token_budget": 2048,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 11,
+        "total_tokens": 4556,
+        "avg_completeness": 1.0,
+        "avg_tokens": 303.73333333333335,
+        "success_rate": 0.7333333333333333
+      },
+      "fgt_foveated": {
+        "correct": 11,
+        "total_tokens": 4556,
+        "avg_completeness": 1.0,
+        "avg_tokens": 303.73333333333335,
+        "success_rate": 0.7333333333333333
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0009",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 279,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 279,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0050",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 310,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 310,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0081",
+          "question": "What value did we configure for max_retries?",
+          "answer": "3",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 402,
+            "turns_retrieved": 72,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 402,
+            "turns_retrieved": 72,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0017",
+          "question": "What did I say we need for user engagement?",
+          "answer": "real-time notifications",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 293,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 293,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0064",
+          "question": "What feature did I request for security?",
+          "answer": "2FA authentication",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 245,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0012",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 180,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0074",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 366,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 366,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0010",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 284,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 284,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0058",
+          "question": "What value did we configure for batch_size?",
+          "answer": "100",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 286,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 286,
+            "turns_retrieved": 52,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0047",
+          "question": "What feature did I request for internationalization?",
+          "answer": "multi-language support",
+          "num_turns": 42,
+          "raw_truncate": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 241,
+            "turns_retrieved": 42,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0089",
+          "question": "Which feature was required?",
+          "answer": "real-time notifications",
+          "num_turns": 32,
+          "raw_truncate": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 184,
+            "turns_retrieved": 32,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0052",
+          "question": "Which deployment tool did we decide on earlier?",
+          "answer": "Docker",
+          "num_turns": 52,
+          "raw_truncate": {
+            "tokens": 298,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 298,
+            "turns_retrieved": 52,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0066",
+          "question": "What did I say we need for compliance?",
+          "answer": "data export functionality",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 393,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 393,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0029",
+          "question": "What was my platform choice?",
+          "answer": "AWS Lambda",
+          "num_turns": 62,
+          "raw_truncate": {
+            "tokens": 380,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 380,
+            "turns_retrieved": 62,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 72,
+          "raw_truncate": {
+            "tokens": 415,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 415,
+            "turns_retrieved": 72,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}
