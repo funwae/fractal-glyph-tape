@@ -9,7 +9,6 @@ const links = {
   ],
   community: [
     { name: 'GitHub Repository', href: 'https://github.com/funwae/fractal-glyph-tape' },
-    { name: 'Discussions', href: 'https://github.com/funwae/fractal-glyph-tape/discussions' },
     { name: 'Issues', href: 'https://github.com/funwae/fractal-glyph-tape/issues' },
     { name: 'Contributing', href: 'https://github.com/funwae/fractal-glyph-tape/blob/main/CONTRIBUTING.md' },
   ],
@@ -27,7 +26,7 @@ export default function Footer() {
               A fractal-addressable phrase memory for semantic compression and cross-lingual LLMs.
             </p>
             <p className="text-sm text-gray-500">
-              Built by <span className="text-primary font-semibold">Glyphd Labs</span>
+              Built by <a href="https://glyphd.com" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">Glyphd Labs</a>
             </p>
             <p className="text-xs text-gray-500 mt-2 italic">
               Turning the space of &quot;things we say&quot; into a structured, navigable map.
@@ -76,7 +75,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            © 2025 Glyphd Labs. Released under MIT License.
+            © 2025 Glyphd Labs / Hayden Lindley. Proprietary License - Non-commercial use only.
           </p>
 
           <div className="flex items-center gap-6">
@@ -99,7 +98,7 @@ export default function Footer() {
               <FileText className="w-5 h-5" />
             </a>
             <a
-              href="mailto:contact@glyphd.com"
+              href="mailto:info@glyphd.com"
               className="text-gray-400 hover:text-primary transition-colors"
               aria-label="Contact"
             >

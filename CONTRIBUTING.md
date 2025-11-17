@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to Fractal Glyph Tape! This project aims to advance semantic compression and cross-lingual understanding through innovative phrase memory systems.
 
+**Important:** This project uses a **Proprietary License**. By contributing, you acknowledge that your contributions will become part of the proprietary codebase and will be subject to the same license restrictions. Please review the [LICENSE](../LICENSE) file and the License section below before contributing.
+
 ## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
@@ -12,12 +14,16 @@ Thank you for your interest in contributing to Fractal Glyph Tape! This project 
 - [Pull Request Process](#pull-request-process)
 - [Adding Experiments](#adding-experiments)
 - [Documentation](#documentation)
+- [Recognition](#recognition)
+- [License and Contribution Agreement](#license-and-contribution-agreement)
 
 ## Code of Conduct
 
 ### Our Pledge
 
 We are committed to providing a welcoming and inclusive environment for all contributors, regardless of experience level, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.
+
+**Note:** While we welcome contributions, please be aware that this is a proprietary project. All contributions become part of the proprietary codebase subject to the Proprietary License.
 
 ### Expected Behavior
 
@@ -355,15 +361,57 @@ Experiments are a core part of FGT research. To add a new experiment:
 
 ## Recognition
 
-Contributors will be:
-- Listed in project acknowledgments
-- Credited in any academic publications using their contributions
-- Invited to co-author papers for significant research contributions
+Contributors may be:
+- Listed in project acknowledgments (at the copyright holder's discretion)
+- Credited in any academic publications using their contributions (at the copyright holder's discretion)
+- Invited to co-author papers for significant research contributions (at the copyright holder's discretion)
 
-## License
+**Note:** While we value and appreciate contributions, recognition is at the discretion of the copyright holder and is not guaranteed. All contributions become the property of the copyright holder under the Proprietary License.
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+## License and Contribution Agreement
+
+### Proprietary License
+
+This project is licensed under a **Proprietary License** (see [LICENSE](../LICENSE) for full terms). Key points:
+
+- **Non-commercial use only** - The software may be used for personal, educational, or research purposes
+- **Commercial use prohibited** - Any commercial use requires explicit written permission from the copyright holder
+- **No redistribution** - You may not redistribute the software without permission
+- **No modification/derivatives** - Creating derivative works requires explicit written permission
+
+### Contribution Terms
+
+By submitting a contribution (code, documentation, examples, or any other material) to this repository, you agree to the following:
+
+1. **Assignment of Rights**: You grant the copyright holder (Glyphd Labs / Hayden Lindley) exclusive ownership of your contribution, including all intellectual property rights.
+
+2. **Proprietary License**: Your contribution will be incorporated into the codebase and licensed under the same Proprietary License as the rest of the project.
+
+3. **No Commercial Use**: You understand that your contribution, once merged, will be subject to the same restrictions prohibiting commercial use without explicit written permission.
+
+4. **Warranty**: You represent that:
+   - You have the right to grant these rights
+   - Your contribution is your original work (or you have obtained necessary permissions)
+   - Your contribution does not violate any third-party rights
+
+5. **No Compensation**: You understand that contributions are voluntary and you will not receive monetary compensation for your contributions.
+
+6. **Attribution**: While you may be credited in acknowledgments, you acknowledge that the copyright holder has full control over how contributions are attributed and used.
+
+### What This Means
+
+- Your contributions become part of a proprietary codebase
+- The copyright holder has full control over how the code (including your contributions) is used
+- Commercial use of the entire project (including your contributions) requires explicit permission
+- You retain no rights to use your contributions commercially outside of this project
+
+### Questions About Licensing?
+
+If you have questions about the license or contribution terms, please:
+- Review the [LICENSE](../LICENSE) file
+- Open a [GitHub Discussion](https://github.com/funwae/fractal-glyph-tape/discussions) with questions
+- Contact contact@glyphd.com for commercial licensing inquiries
 
 ---
 
-Thank you for contributing to Fractal Glyph Tape! Your work helps advance semantic compression and cross-lingual understanding for the entire NLP community.
+Thank you for contributing to Fractal Glyph Tape! Your work helps advance semantic compression and cross-lingual understanding. We appreciate your understanding of the proprietary licensing model.

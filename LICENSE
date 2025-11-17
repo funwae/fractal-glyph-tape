@@ -1,21 +1,66 @@
-MIT License
+PROPRIETARY LICENSE
 
-Copyright (c) 2024 Glyphd Labs
+Copyright (c) 2024 Glyphd Labs / Hayden Lindley. All Rights Reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software and associated documentation files (the "Software") are the
+proprietary and confidential property of the copyright holder. Unauthorized
+copying, modification, distribution, or use of this Software, via any medium,
+is strictly prohibited without the express written permission of the copyright
+holder.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+TERMS AND CONDITIONS:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. NON-COMMERCIAL USE ONLY
+   This Software is provided for NON-COMMERCIAL use only. You may use this
+   Software for personal, educational, or research purposes, provided that:
+   - You do not use it for any commercial purpose whatsoever
+   - You do not incorporate it into any commercial product or service
+   - You do not charge fees or receive compensation for its use
+   - You do not use it to generate revenue in any form
+
+2. COMMERCIAL USE PROHIBITED
+   ANY commercial use, including but not limited to:
+   - Use in commercial products or services
+   - Use by for-profit organizations
+   - Use to generate revenue, directly or indirectly
+   - Use in any commercial context
+   is STRICTLY PROHIBITED without explicit written permission from the
+   copyright holder.
+
+3. NO REDISTRIBUTION
+   You may NOT redistribute, publish, or share this Software, in whole or in
+   part, without explicit written permission from the copyright holder.
+
+4. NO MODIFICATION OR DERIVATIVE WORKS
+   You may NOT modify, adapt, or create derivative works based on this Software
+   without explicit written permission from the copyright holder.
+
+5. ATTRIBUTION REQUIRED
+   If you are granted permission to use this Software, you must include the
+   following attribution in any documentation, publications, or materials
+   related to your use:
+   "This work uses Fractal Glyph Tape, Copyright (c) 2024 Glyphd Labs /
+   Hayden Lindley. Used with permission."
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+7. PERMISSION REQUESTS
+   For commercial use, modification, redistribution, or any use beyond the
+   scope of this license, please contact:
+   - Email: contact@glyphd.com
+   - GitHub: https://github.com/funwae/fractal-glyph-tape (open an issue)
+
+8. ENFORCEMENT
+   Violation of this license may result in legal action. The copyright holder
+   reserves all rights not expressly granted herein.
+
+By accessing, using, or copying this Software, you agree to be bound by the
+terms of this license. If you do not agree to these terms, you may not use
+this Software.

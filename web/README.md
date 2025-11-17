@@ -71,4 +71,4 @@ web/
 
 ## License
 
-MIT License - see main repository
+Proprietary License - Non-commercial use only. See main repository LICENSE file for details.

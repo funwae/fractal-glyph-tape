@@ -2,7 +2,7 @@
 
 > A fractal-addressable phrase memory that makes language **denser**, **more cross-lingual**, and **more explorable** for LLMs.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Status: Research Prototype](https://img.shields.io/badge/status-research%20prototype-orange.svg)]()
 
@@ -218,7 +218,7 @@ If you use Fractal Glyph Tape in your research, please cite:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under a Proprietary License - see the [LICENSE](LICENSE) file for details. **Non-commercial use only. Commercial use requires explicit written permission.**
 
 ## Acknowledgments
 

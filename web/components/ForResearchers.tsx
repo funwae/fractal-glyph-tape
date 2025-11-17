@@ -1,4 +1,4 @@
-import { Book, Github, FileText, MessageSquare } from 'lucide-react'
+import { Book, Github, FileText } from 'lucide-react'
 
 const topics = [
   'Tokenization and representation learning',
@@ -10,8 +10,8 @@ const topics = [
 const resources = [
   {
     icon: Github,
-    title: 'Open-source Python implementation',
-    description: 'Full codebase available on GitHub under MIT license',
+    title: 'Python implementation',
+    description: 'Full codebase available on GitHub. Non-commercial use only. See LICENSE for details.',
     href: 'https://github.com/funwae/fractal-glyph-tape',
   },
   {
@@ -87,15 +87,6 @@ export default function ForResearchers() {
           >
             <FileText className="w-5 h-5" />
             Read the Paper Draft
-          </a>
-          <a
-            href="https://github.com/funwae/fractal-glyph-tape/discussions"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto rounded-lg border border-gray-600 px-8 py-4 text-base font-semibold text-white hover:bg-white/10 transition-all flex items-center justify-center gap-2"
-          >
-            <MessageSquare className="w-5 h-5" />
-            Join Discussions
           </a>
         </div>
 
