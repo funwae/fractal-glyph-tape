@@ -1,4 +1,4 @@
-import { Github, FileText } from 'lucide-react'
+import { Github, FileText, Map } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -28,7 +28,21 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="mt-10 flex items-center justify-center gap-x-6 gap-y-4 flex-wrap">
+          <a
+            href="/demo"
+            className="rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-all flex items-center gap-2"
+          >
+            <FileText className="w-5 h-5" />
+            Try the Demo
+          </a>
+          <a
+            href="/explore"
+            className="rounded-lg bg-gradient-to-r from-primary to-secondary px-6 py-3 text-base font-semibold text-white shadow-lg hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all flex items-center gap-2"
+          >
+            <Map className="w-5 h-5" />
+            Explore the Map
+          </a>
           <a
             href="https://github.com/funwae/fractal-glyph-tape"
             target="_blank"

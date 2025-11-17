@@ -1,0 +1,1064 @@
+{
+  "timestamp": "2025-11-17T20:32:40.453660",
+  "dataset": "data/phase5/dialog_test.jsonl",
+  "num_episodes": 15,
+  "token_budgets": [
+    512,
+    1024,
+    2048
+  ],
+  "fgms_available": false,
+  "note": "Standalone benchmark with simulated foveation strategy",
+  "results": [
+    {
+      "token_budget": 512,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 13,
+        "total_tokens": 612,
+        "avg_completeness": 1.0,
+        "avg_tokens": 40.8,
+        "success_rate": 0.8666666666666667
+      },
+      "fgt_foveated": {
+        "correct": 13,
+        "total_tokens": 612,
+        "avg_completeness": 1.0,
+        "avg_tokens": 40.8,
+        "success_rate": 0.8666666666666667
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0027",
+          "question": "What was my API framework choice?",
+          "answer": "FastAPI",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0072",
+          "question": "What was my database choice?",
+          "answer": "PostgreSQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 32,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 32,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0014",
+          "question": "What value did we configure for max_file_size?",
+          "answer": "10MB",
+          "num_turns": 8,
+          "raw_truncate": {
+            "tokens": 39,
+            "turns_retrieved": 8,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 39,
+            "turns_retrieved": 8,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0085",
+          "question": "What did I set the connection_pool_size to?",
+          "answer": "20",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 47,
+            "turns_retrieved": 10,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 47,
+            "turns_retrieved": 10,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0060",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 35,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 35,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0016",
+          "question": "What did I say we need for security?",
+          "answer": "2FA authentication",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 48,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 48,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0030",
+          "question": "What language did I choose for type safety?",
+          "answer": "TypeScript",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 56,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 56,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0019",
+          "question": "Which UI feature was required?",
+          "answer": "dark mode support",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 33,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 33,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0079",
+          "question": "What API technology did I choose for our API?",
+          "answer": "GraphQL",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 61,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 61,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0002",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 42,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 42,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0025",
+          "question": "What cache did I choose for caching?",
+          "answer": "Redis",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 34,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 34,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0031",
+          "question": "What was my API technology choice?",
+          "answer": "GraphQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 37,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 37,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0003",
+          "question": "What API framework did I choose for the API?",
+          "answer": "FastAPI",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0096",
+          "question": "Which database did we decide on earlier?",
+          "answer": "PostgreSQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 38,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 38,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 8,
+          "raw_truncate": {
+            "tokens": 54,
+            "turns_retrieved": 8,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 54,
+            "turns_retrieved": 8,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "token_budget": 1024,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 13,
+        "total_tokens": 612,
+        "avg_completeness": 1.0,
+        "avg_tokens": 40.8,
+        "success_rate": 0.8666666666666667
+      },
+      "fgt_foveated": {
+        "correct": 13,
+        "total_tokens": 612,
+        "avg_completeness": 1.0,
+        "avg_tokens": 40.8,
+        "success_rate": 0.8666666666666667
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0027",
+          "question": "What was my API framework choice?",
+          "answer": "FastAPI",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0072",
+          "question": "What was my database choice?",
+          "answer": "PostgreSQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 32,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 32,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0014",
+          "question": "What value did we configure for max_file_size?",
+          "answer": "10MB",
+          "num_turns": 8,
+          "raw_truncate": {
+            "tokens": 39,
+            "turns_retrieved": 8,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 39,
+            "turns_retrieved": 8,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0085",
+          "question": "What did I set the connection_pool_size to?",
+          "answer": "20",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 47,
+            "turns_retrieved": 10,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 47,
+            "turns_retrieved": 10,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0060",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 35,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 35,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0016",
+          "question": "What did I say we need for security?",
+          "answer": "2FA authentication",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 48,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 48,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0030",
+          "question": "What language did I choose for type safety?",
+          "answer": "TypeScript",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 56,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 56,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0019",
+          "question": "Which UI feature was required?",
+          "answer": "dark mode support",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 33,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 33,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0079",
+          "question": "What API technology did I choose for our API?",
+          "answer": "GraphQL",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 61,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 61,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0002",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 42,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 42,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0025",
+          "question": "What cache did I choose for caching?",
+          "answer": "Redis",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 34,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 34,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0031",
+          "question": "What was my API technology choice?",
+          "answer": "GraphQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 37,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 37,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0003",
+          "question": "What API framework did I choose for the API?",
+          "answer": "FastAPI",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0096",
+          "question": "Which database did we decide on earlier?",
+          "answer": "PostgreSQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 38,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 38,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 8,
+          "raw_truncate": {
+            "tokens": 54,
+            "turns_retrieved": 8,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 54,
+            "turns_retrieved": 8,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "token_budget": 2048,
+      "num_episodes": 15,
+      "raw_truncate": {
+        "correct": 13,
+        "total_tokens": 612,
+        "avg_completeness": 1.0,
+        "avg_tokens": 40.8,
+        "success_rate": 0.8666666666666667
+      },
+      "fgt_foveated": {
+        "correct": 13,
+        "total_tokens": 612,
+        "avg_completeness": 1.0,
+        "avg_tokens": 40.8,
+        "success_rate": 0.8666666666666667
+      },
+      "episodes": [
+        {
+          "episode_id": "ep_0027",
+          "question": "What was my API framework choice?",
+          "answer": "FastAPI",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0072",
+          "question": "What was my database choice?",
+          "answer": "PostgreSQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 32,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 32,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0014",
+          "question": "What value did we configure for max_file_size?",
+          "answer": "10MB",
+          "num_turns": 8,
+          "raw_truncate": {
+            "tokens": 39,
+            "turns_retrieved": 8,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 39,
+            "turns_retrieved": 8,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0085",
+          "question": "What did I set the connection_pool_size to?",
+          "answer": "20",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 47,
+            "turns_retrieved": 10,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 47,
+            "turns_retrieved": 10,
+            "success": false,
+            "answer_keywords_present": false,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0060",
+          "question": "What value did we configure for rate_limit?",
+          "answer": "1000 requests/min",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 35,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 35,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0016",
+          "question": "What did I say we need for security?",
+          "answer": "2FA authentication",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 48,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 48,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0030",
+          "question": "What language did I choose for type safety?",
+          "answer": "TypeScript",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 56,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 56,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0019",
+          "question": "Which UI feature was required?",
+          "answer": "dark mode support",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 33,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 33,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0079",
+          "question": "What API technology did I choose for our API?",
+          "answer": "GraphQL",
+          "num_turns": 10,
+          "raw_truncate": {
+            "tokens": 61,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 61,
+            "turns_retrieved": 10,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0002",
+          "question": "What frontend framework did I choose for the frontend?",
+          "answer": "React",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 42,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 42,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0025",
+          "question": "What cache did I choose for caching?",
+          "answer": "Redis",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 34,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 34,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0031",
+          "question": "What was my API technology choice?",
+          "answer": "GraphQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 37,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 37,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0003",
+          "question": "What API framework did I choose for the API?",
+          "answer": "FastAPI",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 28,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0096",
+          "question": "Which database did we decide on earlier?",
+          "answer": "PostgreSQL",
+          "num_turns": 6,
+          "raw_truncate": {
+            "tokens": 38,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 38,
+            "turns_retrieved": 6,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        },
+        {
+          "episode_id": "ep_0005",
+          "question": "Which platform did we decide on earlier?",
+          "answer": "AWS Lambda",
+          "num_turns": 8,
+          "raw_truncate": {
+            "tokens": 54,
+            "turns_retrieved": 8,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          },
+          "fgt_foveated": {
+            "tokens": 54,
+            "turns_retrieved": 8,
+            "success": true,
+            "answer_keywords_present": true,
+            "relevant_turn_included": true,
+            "completeness": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

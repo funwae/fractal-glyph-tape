@@ -1,0 +1,148 @@
+# Multilingual configuration for Phase 3
+# Demonstrates cross-lingual clustering and glyph bridging
+
+project_name: "fgt_multilingual_v1"
+random_seed: 42
+
+# Data ingestion settings
+ingest:
+  input_path: "data/raw"
+  output_path: "data/multilingual_phrases.jsonl"
+  min_tokens: 3
+  max_tokens: 50
+  languages:
+    - "en"  # English
+    - "es"  # Spanish
+    - "zh"  # Chinese
+  target_phrase_count: 200  # Smaller for demo
+
+  segmenter:
+    method: "nltk"
+    language: "english"  # Used for English, others use regex
+
+  filters:
+    min_length: 5
+    max_length: 500
+    remove_duplicates: false  # Keep cross-lingual duplicates!
+
+  # Language detection
+  detect_language: true
+  language_detector: "langdetect"  # or "simple" for pattern matching
+
+# Embedding settings - MULTILINGUAL MODEL
+embed:
+  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  # This model creates language-agnostic embeddings!
+  # Semantically similar phrases in different languages will have similar embeddings
+
+  batch_size: 32
+  device: "cpu"
+  max_seq_length: 128
+  output_path: "embeddings/multilingual_v1"
+  shard_size: 100
+  save_format: "npy"
+
+# Clustering settings
+cluster:
+  method: "minibatch_kmeans"
+  n_clusters: 50  # Small number to force cross-lingual clustering
+  # With 200 phrases across 3 languages, we want phrases in different
+  # languages to cluster together based on semantics
+
+  batch_size: 50
+  max_iter: 100
+  n_init: 3
+  embeddings_path: "embeddings/multilingual_v1"
+  output_path: "clusters/multilingual_v1"
+  compute_coherence: true
+  extract_examples: true
+  examples_per_cluster: 10  # Show examples from multiple languages
+
+# Cluster metadata
+metadata:
+  top_phrases_per_cluster: 15
+  compute_statistics: true
+  stats_include:
+    - size
+    - centroid_norm
+    - intra_cluster_distance
+    - coherence_score
+    - language_distribution  # NEW: Track languages in each cluster
+
+# Glyph assignment
+glyph:
+  alphabet_path: "src/glyph/mandarin_alphabet.txt"
+  default_alphabet_size: 1000
+  max_glyph_length: 3
+  encoding_base: null
+  output_path: "clusters/multilingual_v1/glyph_mapping.msgpack"
+
+# Fractal tape
+tape:
+  projection_method: "umap"
+  projection_dims: 2
+
+  umap:
+    n_neighbors: 10  # Smaller for small dataset
+    min_dist: 0.1
+    metric: "cosine"
+    random_state: 42
+
+  fractal_type: "triangular"
+  max_depth: 8
+  output_path: "tape/multilingual_v1"
+  storage_format: "sqlite"
+  create_indexes: true
+  index_types:
+    - "glyph_id"
+    - "cluster_id"
+    - "fractal_address"
+
+# Evaluation - Cross-lingual specific
+eval:
+  test_phrases_path: "data/multilingual_test.jsonl"
+  test_size: 50
+  metrics:
+    - compression_ratio
+    - cluster_coherence
+    - cross_lingual_precision  # NEW: Cross-lingual retrieval accuracy
+    - language_purity  # NEW: How mixed are clusters?
+
+  # Cross-lingual retrieval
+  cross_lingual:
+    enabled: true
+    test_pairs:
+      - ["en", "es"]  # English-Spanish
+      - ["en", "zh"]  # English-Chinese
+      - ["es", "zh"]  # Spanish-Chinese
+    precision_at_k: [1, 3, 5, 10]
+
+  results_path: "results/multilingual_v1"
+  save_plots: true
+  plot_format: "png"
+
+# Logging
+logging:
+  level: "INFO"
+  output_path: "logs/fgt_multilingual.log"
+  console_output: true
+  log_progress: true
+  log_statistics: true
+  log_examples: true
+  examples_count: 5
+
+# Resources
+resources:
+  max_memory_gb: 8
+  gpu_memory_fraction: 0.5
+  num_workers: 2
+
+# Experimental features
+experimental:
+  enable_hybrid_tokenizer: true
+  enable_cross_lingual: true
+  enable_online_updates: false
+
+  # Cross-lingual visualization
+  visualize_language_distribution: true
+  color_by_language: true

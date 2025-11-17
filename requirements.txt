@@ -53,3 +53,10 @@ spacy>=3.6.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
 plotly>=5.15.0
+
+# Evaluation metrics
+rouge-score>=0.1.2
+bert-score>=0.3.13
+
+# Multilingual support (Phase 3)
+langdetect>=1.0.9
