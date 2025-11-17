@@ -4,7 +4,9 @@ This directory contains scripts for running experiments and managing the Fractal
 
 ## Available Scripts
 
-### Compression Experiments
+### Phase 1: Compression & Visualization
+
+#### Compression Experiments
 
 #### `run_compression_experiment.py`
 
@@ -206,9 +208,107 @@ cd web
 npm install
 ```
 
+### Phase 2: LLM Integration
+
+#### `run_context_efficiency_experiment.py`
+
+Run context window efficiency experiments to measure how much context can be preserved with FGT vs baseline tokenization.
+
+**Usage:**
+
+```bash
+python scripts/run_context_efficiency_experiment.py \
+  --model <model_name> \
+  --tape-dir <tape_dir> \
+  --test-file <file> \
+  --budgets <budget1> <budget2> ... \
+  [--output-dir <dir>] \
+  [--device <device>]
+```
+
+**Arguments:**
+
+- `--model`: Pre-trained model name (default: gpt2)
+- `--tape-dir`: Path to tape directory (default: tape/v1)
+- `--test-file`: File with test texts (one per line)
+- `--test-texts`: Or provide texts as command-line arguments
+- `--budgets`: Token budgets to test (default: 128 256 512 1024)
+- `--output-dir`: Directory to save results (default: results/context_efficiency)
+- `--device`: Device to run on (default: cpu)
+
+**Example:**
+
+```bash
+python scripts/run_context_efficiency_experiment.py \
+  --model gpt2 \
+  --tape-dir tape/v1 \
+  --test-file data/test_contexts.txt \
+  --budgets 128 256 512 1024 \
+  --device cuda
+```
+
+**Output:**
+
+JSON file with:
+- Compression metrics per text
+- Preservation ratios at each budget
+- Relative improvement over baseline
+
+#### `train_fgt_model.py`
+
+Fine-tune a language model with FGT glyph tokens.
+
+**Usage:**
+
+```bash
+python scripts/train_fgt_model.py \
+  --model <model_name> \
+  --tape-dir <tape_dir> \
+  --train-file <file> \
+  --output-dir <dir> \
+  [--epochs <n>] \
+  [--batch-size <n>] \
+  [--learning-rate <lr>] \
+  [--max-length <n>] \
+  [--device <device>]
+```
+
+**Arguments:**
+
+- `--model`: Pre-trained model name (default: gpt2)
+- `--tape-dir`: Path to tape directory (default: tape/v1)
+- `--train-file`: Training data file (required)
+- `--output-dir`: Directory to save model (default: models/fgt_finetuned)
+- `--epochs`: Number of epochs (default: 3)
+- `--batch-size`: Batch size (default: 8)
+- `--learning-rate`: Learning rate (default: 5e-5)
+- `--max-length`: Max sequence length (default: 512)
+- `--device`: Device (default: cuda if available)
+
+**Example:**
+
+```bash
+python scripts/train_fgt_model.py \
+  --model gpt2 \
+  --tape-dir tape/v1 \
+  --train-file data/train.txt \
+  --output-dir models/fgt_gpt2 \
+  --epochs 3 \
+  --batch-size 8 \
+  --device cuda
+```
+
+**Output:**
+
+- Fine-tuned model saved to output directory
+- Training logs with loss and glyph counts
+
 ## Tips
 
 - Use `--use-bertscore` only when needed, as it's computationally expensive
 - Run multiple experiments with different configurations to compare results
 - The visualizer requires computed layout data (`clusters/layout.npy`)
 - Check the API server is running before opening the web visualizer
+- For Phase 2 experiments, ensure you have a built tape with cluster metadata
+- Context efficiency experiments work best with long, phrase-heavy texts
+- Training with FGT benefits from larger batch sizes if GPU memory allows
