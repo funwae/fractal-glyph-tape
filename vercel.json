@@ -1,9 +1,5 @@
 {
-  "buildCommand": "cd web && npm install && npm run build",
-  "outputDirectory": "web/.next",
   "framework": "nextjs",
-  "installCommand": "cd web && npm install",
-  "devCommand": "cd web && npm run dev",
   "regions": ["iad1"],
   "github": {
     "silent": true
