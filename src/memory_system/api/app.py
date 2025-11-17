@@ -32,7 +32,7 @@ class ReadMemoryRequest(BaseModel):
     actor_id: str = Field(..., description="Actor ID")
     query: Optional[str] = Field(None, description="Optional query for relevance")
     token_budget: int = Field(2048, description="Token budget", ge=128, le=32000)
-    mode: str = Field("mixed", description="Policy mode: recent, relevant, or mixed")
+    mode: str = Field("mixed", description="Policy mode: recent, relevant, mixed, or foveated")
     world: Optional[str] = Field(None, description="Optional world filter")
     region: Optional[str] = Field(None, description="Optional region filter")
     tags: Optional[List[str]] = Field(None, description="Optional tag filters")
@@ -42,7 +42,7 @@ class AgentChatRequest(BaseModel):
     actor_id: str = Field(..., description="Actor ID")
     messages: List[Dict[str, str]] = Field(..., description="Chat messages")
     token_budget: int = Field(2048, description="Memory token budget", ge=128, le=16000)
-    mode: str = Field("mixed", description="Memory policy mode")
+    mode: str = Field("foveated", description="Memory policy mode: recent, relevant, mixed, foveated")
     llm_provider: str = Field("mock", description="LLM provider: mock, openai, anthropic")
     model: Optional[str] = Field(None, description="Model name")
 
