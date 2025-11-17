@@ -118,6 +118,49 @@ Researchers can explore how language is used via interactive fractal maps showin
 ### 5. Training Acceleration
 Fine-tune LLMs on glyph-enhanced sequences. Less data redundancy = faster convergence and better generalization.
 
+## 📈 Results — Smart Memory vs Naive Truncation
+
+We benchmarked the Fractal Glyph Memory system on synthetic multi-turn dialogs designed to mimic a real agent:
+
+- Conversations contain **early setup information** (goals, constraints, preferences),
+- followed by **filler turns and topic drift**,
+- and end with a **question** that depends on that buried early information.
+
+We compared two context strategies under fixed token budgets:
+
+1. **RAW-TRUNCATE**
+   Take the last N tokens of the conversation and feed them to the model.
+
+2. **FGT-FOVEATED (Fractal Glyph Tape)**
+   Simulate the behavior of the Fractal Glyph Memory Service:
+   - Allocate ~30% of the budget to **very early turns** (where setup lives),
+   - ~30% to **semantically relevant turns** (keyword/embedding-matched to the question),
+   - ~40% to **recent turns** for conversational coherence.
+
+### 🎯 Accuracy vs Token Budget
+
+On a synthetic benchmark (150 episodes, train/val/test), we measured answer accuracy:
+
+| Token Budget | RAW-TRUNCATE | FGT-FOVEATED | Improvement |
+|--------------|--------------|--------------|-------------|
+| **256**      | 26.7%        | **73.3%**    | **+46.7 pp** |
+| 512          | 73.3%        | 73.3%        | +0.0 pp      |
+| 1024         | 73.3%        | 73.3%        | +0.0 pp      |
+| 2048         | 73.3%        | 73.3%        | +0.0 pp      |
+
+**Key insight:**
+
+- Under **tight budgets** (256 tokens), naive truncation forgets the early setup almost every time.
+  Fractal Glyph memory's foveated policy pulls in **early + relevant + recent** slices and nearly *triples* accuracy.
+- Once the token budget is big enough to include the whole episode (512+ in this setup), both strategies converge, as expected.
+
+In other words:
+
+> Fractal Glyph Memory is not a "bigger context window."
+> It's a **smarter way to pack the right context** into the same number of tokens.
+
+Full methodology and benchmark details: [`docs/PHASE-5-RESULTS.md`](docs/PHASE-5-RESULTS.md).
+
 ## Project Status
 
 **Current Phase**: Phase 0 - Documentation Complete, Implementation Starting

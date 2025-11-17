@@ -4,7 +4,7 @@ Foveation engine - orchestrates memory retrieval with policies
 from typing import List, Optional, Dict, Any
 from ..models import MemoryEntry
 from ..storage import SQLiteMemoryStore
-from .policies import FoveationPolicy, MixedPolicy, RecentPolicy, RelevantPolicy
+from .policies import FoveationPolicy, MixedPolicy, RecentPolicy, RelevantPolicy, FoveatedPolicy
 
 
 class FoveationEngine:
@@ -28,7 +28,8 @@ class FoveationEngine:
         self.policies = {
             "recent": RecentPolicy(),
             "relevant": RelevantPolicy(),
-            "mixed": MixedPolicy(recent_weight=0.3, relevant_weight=0.7)
+            "mixed": MixedPolicy(recent_weight=0.3, relevant_weight=0.7),
+            "foveated": FoveatedPolicy(early_weight=0.30, relevant_weight=0.30, recent_weight=0.40)
         }
 
     def retrieve(
@@ -49,7 +50,7 @@ class FoveationEngine:
             actor_id: Actor whose memories to retrieve
             query: Optional query for relevance ranking
             token_budget: Maximum tokens to include
-            mode: Policy mode ("recent", "relevant", "mixed")
+            mode: Policy mode ("recent", "relevant", "mixed", "foveated")
             world: Optional world filter
             region: Optional region filter
             tags: Optional tag filters
@@ -67,7 +68,18 @@ class FoveationEngine:
         policy = self.policies.get(mode, self.policies["mixed"])
 
         # Retrieve candidate memories
-        if query:
+        # For foveated policy, we need ALL memories so the policy can do zone-based selection
+        # For other policies, FTS can pre-filter
+        if mode == "foveated":
+            # Get all memories for this actor (let policy do filtering)
+            candidates = self.store.read(
+                actor_id=actor_id,
+                world=world,
+                region=region,
+                tags=tags,
+                limit=max_candidates
+            )
+        elif query:
             # Use full-text search
             candidates = self.store.search(
                 query=query,

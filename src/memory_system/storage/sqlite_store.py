@@ -228,6 +228,9 @@ class SQLiteMemoryStore:
         """
         cursor = self.conn.cursor()
 
+        # Sanitize query for FTS5 - escape quotes and wrap in quotes for phrase search
+        sanitized_query = query.replace('"', '""')
+
         # FTS query
         if actor_id:
             cursor.execute("""
@@ -236,7 +239,7 @@ class SQLiteMemoryStore:
                 WHERE memory_fts MATCH ? AND m.actor_id = ?
                 ORDER BY rank
                 LIMIT ?
-            """, (query, actor_id, limit))
+            """, (f'"{sanitized_query}"', actor_id, limit))
         else:
             cursor.execute("""
                 SELECT m.* FROM memory_fts f
@@ -244,7 +247,7 @@ class SQLiteMemoryStore:
                 WHERE memory_fts MATCH ?
                 ORDER BY rank
                 LIMIT ?
-            """, (query, limit))
+            """, (f'"{sanitized_query}"', limit))
 
         rows = cursor.fetchall()
         return [self._row_to_entry(dict(row)) for row in rows]
