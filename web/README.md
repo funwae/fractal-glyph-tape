@@ -1,74 +1,81 @@
-# Fractal Glyph Tape Landing Page
+# Fractal Glyph Tape - Web Interface
 
-This is the landing page for Fractal Glyph Tape, built with Next.js 14 and deployed on Vercel.
+Next.js web application for Fractal Glyph Tape, including the Memory Console UI.
 
-## Development
+## Features
+
+- **Landing Page**: Overview and introduction to FGT
+- **Memory Console**: Interactive agent memory interface (`/memory-console`)
+- **API Proxy**: Routes to Python FastAPI backend
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Python memory server running (see root README)
+
+### Installation
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Run development server
+### Development
+
+```bash
 npm run dev
+```
 
-# Build for production
+Open [http://localhost:3000](http://localhost:3000)
+
+### Memory Console
+
+Navigate to [http://localhost:3000/memory-console](http://localhost:3000/memory-console)
+
+Requirements:
+- Python memory server must be running at `http://localhost:8001`
+- Configure `MEMORY_API_URL` in `.env.local` if using different URL
+
+### Build
+
+```bash
 npm run build
-
-# Start production server
 npm start
 ```
 
-## Deployment
+## Project Structure
 
-This site is configured for static export and deploys to Vercel.
+```
+app/
+  page.tsx                    # Landing page
+  memory-console/page.tsx     # Memory Console
+  api/                        # API routes
+    memory/                   # Memory API proxies
+    agent/                    # Agent backend
+components/
+  MemoryChatPanel.tsx        # Chat interface
+  MemoryContextPanel.tsx     # Context visualization
+  MemoryTimeline.tsx         # Event timeline
+  GlyphClusterList.tsx       # Glyph explorer
+  AddressInspector.tsx       # Address details
+types/
+  memory.ts                   # TypeScript types
+```
 
-### Deploy to Vercel
+## Environment Variables
 
-1. Push to GitHub
-2. Import project in Vercel dashboard
-3. Configure:
-   - **Root Directory:** `web`
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `out`
-   - **Install Command:** `npm install`
-
-Or use Vercel CLI:
+Copy `.env.local.example` to `.env.local`:
 
 ```bash
-cd web
-npm install -g vercel
-vercel
+cp .env.local.example .env.local
 ```
 
-## Stack
+Required variables:
+- `MEMORY_API_URL`: URL of Python memory server (default: `http://localhost:8001`)
 
-- **Framework:** Next.js 14 (App Router)
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide React
-- **Deployment:** Vercel
-- **Rendering:** Static Export (SSG)
+## Learn More
 
-## Structure
-
-```
-web/
-├── app/
-│   ├── layout.tsx       # Root layout with metadata
-│   ├── page.tsx         # Main landing page
-│   └── globals.css      # Global styles
-├── components/
-│   ├── Hero.tsx         # Hero section
-│   ├── Features.tsx     # Features grid
-│   ├── WhyItMatters.tsx # Benefits section
-│   ├── HowItWorks.tsx   # Pipeline explanation
-│   ├── ForResearchers.tsx # Research resources
-│   └── Footer.tsx       # Footer with links
-├── public/              # Static assets
-├── next.config.js       # Next.js configuration
-├── tailwind.config.ts   # Tailwind configuration
-└── package.json         # Dependencies
-```
-
-## License
-
-Proprietary License - Non-commercial use only. See main repository LICENSE file for details.
+- [Phase 4 Documentation](../docs/210-phase-4-agent-memory-and-api.md)
+- [Memory Console UI Guide](../docs/213-agent-memory-console-ui.md)
+- [Evaluation & Testing](../docs/211-agent-memory-eval-and-test-plan.md)

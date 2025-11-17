@@ -34,6 +34,11 @@ LLMs can be trained or adapted to **read and write this inner code**, enabling:
 - ✅ **LLM adapter** – training & inference helpers for glyph-aware models
 - ✅ **Visualization API** – backend for a fractal phrase-map web UI
 - ✅ **Experiment scripts** – compression, context, and cross-lingual evaluations
+- ✅ **Phase 4: Agent Memory OS** – memory service with fractal-addressable storage
+  - FastAPI backend with write/read/regions/addresses endpoints
+  - Memory Console UI for interactive agent memory exploration
+  - Policy-based foveation for efficient context retrieval
+  - SQLite persistence with fractal addressing
 
 See [`docs/README.md`](docs/README.md) for the full technical spec.
 
@@ -48,19 +53,36 @@ See [`docs/README.md`](docs/README.md) for the full technical spec.
 
 ## Quickstart
 
+### Phase 4: Memory Service Quick Start
+
 ```bash
 # 1) Create environment
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# 2) Build a demo tape
+# 2) Start the Memory Service
+python scripts/run_memory_server.py --host 0.0.0.0 --port 8001
+
+# 3) Start the Web UI (in another terminal)
+cd web
+npm install
+npm run dev
+
+# 4) Open the Memory Console
+# Navigate to: http://localhost:3000/memory-console
+```
+
+### Classic FGT Pipeline
+
+```bash
+# Build a demo tape
 python scripts/run_full_build.py --config configs/demo.yaml
 
-# 3) Try the CLI
+# Try the CLI
 echo "Can you send me that file?" | fgt encode
 echo "谷阜" | fgt decode
 
-# 4) Launch the visualizer
+# Launch the visualizer
 uvicorn fgt.viz.app:app --reload
 ```
 
@@ -120,13 +142,18 @@ Fine-tune LLMs on glyph-enhanced sequences. Less data redundancy = faster conver
 
 ## Project Status
 
-**Current Phase**: Phase 0 - Documentation Complete, Implementation Starting
+**Current Phase**: Phase 4 - Agent Memory OS Complete
 
 - [x] Complete documentation suite (45+ specification documents)
 - [x] Architecture design and formal specs
-- [ ] Core prototype implementation
-- [ ] Visualization and metrics
-- [ ] LLM integration and fine-tuning
+- [x] Core prototype implementation (Phases 1-3)
+- [x] Phase 4: Agent Memory OS & API
+  - Memory service with fractal addressing
+  - FastAPI backend with full CRUD operations
+  - Memory Console UI with chat, context, timeline, glyphs, and address inspector
+  - Unit tests for models, store, and policy
+  - SQLite and in-memory storage implementations
+- [ ] Phase 5: Advanced LLM integration and fine-tuning
 - [ ] Cross-lingual experiments
 - [ ] Public demo on glyphd.com
 
@@ -153,6 +180,11 @@ Comprehensive documentation is available in the [`docs/`](docs/) directory:
 - [Data Pipeline](docs/31-data-pipeline-design.md) - End-to-end data flow
 - [Offline Build Pipeline](docs/51-offline-building-pipeline.md) - Step-by-step build process
 - [Demo CLI Spec](docs/70-demo-cli-spec.md) - Command-line interface
+
+### Phase 4: Agent Memory OS
+- [Phase 4 Overview](docs/210-phase-4-agent-memory-and-api.md) - Complete FGMS architecture and API
+- [Evaluation & Testing](docs/211-agent-memory-eval-and-test-plan.md) - Test plans and benchmarks
+- [Memory Console UI](docs/213-agent-memory-console-ui.md) - Web interface documentation
 
 ### For Claude Code Web
 - **[claude.md](claude.md)** - Complete E2E build instructions for AI assistants
