@@ -22,7 +22,7 @@ interface MemoryContext {
 }
 
 export default function MemoryConsolePage() {
-  const [actorId, setActorId] = useState('hayden')
+  const [actorId, setActorId] = useState('User A')
   const [messages, setMessages] = useState<Message[]>([])
   const [memoryContext, setMemoryContext] = useState<MemoryContext | null>(null)
   const [tokenBudget, setTokenBudget] = useState(2048)
