@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// Force dynamic rendering for API routes
+export const dynamic = 'force-dynamic';
+
 const MEMORY_API_URL = process.env.MEMORY_API_URL || "http://localhost:8001";
 
 /**
