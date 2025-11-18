@@ -26,7 +26,7 @@ LLMs can be trained or adapted to **read and write this inner code**, enabling:
 
 ## 🎯 What is Fractal Glyph Tape?
 
-Fractal Glyph Tape (FGT) is a revolutionary approach to language representation that solves three fundamental problems:
+Fractal Glyph Tape (FGT) is a novel approach to language representation that solves three fundamental problems:
 
 ### 1. Redundant Storage
 Modern systems store "Can you send me that file?" millions of times across corpora. **FGT stores it once as a glyph**.

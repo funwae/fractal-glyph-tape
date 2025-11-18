@@ -12,21 +12,28 @@ export default function DemoPage() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="bg-gray-800 border-b border-gray-700 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              FGT Interactive Demo
-            </h1>
-            <p className="text-sm text-gray-400 mt-1">
-              Experience cross-lingual phrase compression in real-time
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                FGT Interactive Demo
+              </h1>
+              <p className="text-sm text-gray-400 mt-1">
+                Experience cross-lingual phrase compression in real-time
+              </p>
+            </div>
+            <a
+              href="/"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              ← Back to Home
+            </a>
+          </div>
+          <div className="p-3 bg-amber-900/20 border border-amber-700/50 rounded-lg">
+            <p className="text-sm text-amber-200">
+              <strong>Note:</strong> Backend API coming soon – for now, use the CLI examples in the README to try encoding/decoding locally.
             </p>
           </div>
-          <a
-            href="/"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            ← Back to Home
-          </a>
         </div>
       </header>
 

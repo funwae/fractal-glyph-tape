@@ -186,6 +186,11 @@ export default function MemoryConsolePage() {
           <p className="text-slate-400">
             Interactive demo of fractal-addressable memory with policy-based foveation
           </p>
+          <div className="mt-3 p-3 bg-amber-900/20 border border-amber-700/50 rounded-lg">
+            <p className="text-sm text-amber-200">
+              <strong>Note:</strong> Hosted demo is UI-only for now; run the full console locally via QUICKSTART to see live memory behavior.
+            </p>
+          </div>
         </div>
 
         {/* Config Bar */}

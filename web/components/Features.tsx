@@ -4,22 +4,22 @@ const features = [
   {
     icon: Cpu,
     title: 'Agent Memory Service',
-    description: 'Production-ready REST API for intelligent memory retrieval. Foveated allocation delivers +46.7pp accuracy gains under tight token budgets.',
+    description: 'Production-ready REST API for intelligent memory retrieval. Foveated allocation delivers +46.7pp accuracy gain at a 256-token budget on synthetic multi-turn dialogs.',
   },
   {
     icon: Package,
     title: 'Semantic Compression',
-    description: 'Smaller corpora and logs with reconstructable meaning. 50-70% compression while preserving semantic content.',
+    description: 'Smaller corpora and logs with reconstructable meaning. 50-70% compression on our test corpora while preserving semantic content.',
   },
   {
     icon: Brain,
     title: 'Effective Context Extension',
-    description: 'More usable signal per token under fixed context windows. Fit 2.5-4x more semantic content in the same token budget.',
+    description: 'More usable signal per token under fixed context windows. Fit 2.5-4x more semantic content in the same token budget on our internal benchmarks.',
   },
   {
     icon: Globe,
     title: 'Cross-Lingual Bridging',
-    description: 'Shared glyph IDs for phrase families spanning multiple languages. 90-95% precision across language pairs.',
+    description: 'Shared glyph IDs for phrase families spanning multiple languages. 90-95% cross-lingual precision on EN↔ES↔ZH retrieval experiments.',
   },
 ]
 
@@ -47,6 +47,13 @@ export default function Features() {
               <p className="text-sm text-gray-400">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Metrics note */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-gray-500 italic">
+            All metrics are from internal experiments; see README and docs/PHASE-5-RESULTS.md for setup and limitations.
+          </p>
         </div>
 
         {/* Implementation checklist */}

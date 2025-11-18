@@ -24,7 +24,7 @@ export default function Hero() {
         <p className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl mx-auto">
           Intelligent memory retrieval for AI agents. Fractal Glyph Tape (FGT) clusters phrases, assigns them <span className="text-primary font-semibold">glyph codes</span>, and uses{' '}
           <span className="text-accent font-semibold">foveated memory</span> to deliver the right context at the right time—achieving{' '}
-          <span className="text-secondary font-semibold">+46.7pp accuracy gains</span> under tight token budgets.
+          <span className="text-secondary font-semibold">+46.7pp accuracy gain at a 256-token budget</span> on synthetic multi-turn dialogs.
         </p>
 
         {/* CTAs */}
