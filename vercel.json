@@ -1,6 +1,5 @@
 {
   "framework": "nextjs",
-  "rootDirectory": "web",
   "regions": ["iad1"],
   "github": {
     "silent": true
