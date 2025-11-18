@@ -1,6 +1,11 @@
-import { Package, Brain, Globe, Search } from 'lucide-react'
+import { Package, Brain, Globe, Search, Cpu } from 'lucide-react'
 
 const features = [
+  {
+    icon: Cpu,
+    title: 'Agent Memory Service',
+    description: 'Production-ready REST API for intelligent memory retrieval. Foveated allocation delivers +46.7pp accuracy gains under tight token budgets.',
+  },
   {
     icon: Package,
     title: 'Semantic Compression',
@@ -14,12 +19,7 @@ const features = [
   {
     icon: Globe,
     title: 'Cross-Lingual Bridging',
-    description: 'Shared glyph IDs for phrase families spanning multiple languages. Language-agnostic retrieval and analysis.',
-  },
-  {
-    icon: Search,
-    title: 'Explorable Phrase Space',
-    description: 'An interactive fractal map of "things we say". Navigate semantic neighborhoods across languages and domains.',
+    description: 'Shared glyph IDs for phrase families spanning multiple languages. 90-95% precision across language pairs.',
   },
 ]
 
@@ -54,14 +54,14 @@ export default function Features() {
           <h3 className="text-xl font-bold mb-6">Implementation Includes:</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             {[
-              'Ingestion pipeline – from raw text to structured phrases',
+              'Memory Service API – REST endpoints for agent memory read/write',
+              'Foveated retrieval – 3-zone allocation (early/relevant/recent)',
+              'Memory Console UI – interactive chat with context visualization',
               'Multilingual embeddings & clustering – phrase families with metadata',
               'Glyph encoding system – integer glyph IDs → Mandarin glyph strings',
               'Fractal tape builder – 2D projection + recursive triangular addressing',
               'Hybrid tokenizer – wraps base tokenizer with glyph-aware spans',
-              'LLM adapter – training & inference helpers for glyph-aware models',
-              'Visualization API – backend for fractal phrase-map web UI',
-              'Experiment scripts – compression, context, cross-lingual evaluations',
+              'Benchmark suite – Phase 5 validation with +46.7pp accuracy gains',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-2">
                 <span className="text-green-400 mt-1">✓</span>

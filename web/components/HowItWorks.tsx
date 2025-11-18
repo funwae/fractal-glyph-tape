@@ -68,7 +68,31 @@ export default function HowItWorks() {
 
         {/* Quickstart */}
         <div className="mt-12 rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-900/80 to-slate-800/50 p-8 backdrop-blur">
-          <h3 className="text-xl font-bold mb-4">Quickstart</h3>
+          <h3 className="text-xl font-bold mb-4">Quickstart: Agent Memory API</h3>
+          <pre className="bg-slate-950/50 rounded-lg p-4 overflow-x-auto text-sm">
+            <code className="text-gray-300">
+              {`# Start the memory service
+python -m src.memory.service
+
+# Write to agent memory
+curl -X POST http://localhost:8000/api/memory/write \\
+  -H "Content-Type: application/json" \\
+  -d '{"agent_id": "my-agent", "turn": {...}}'
+
+# Read with foveated retrieval
+curl -X POST http://localhost:8000/api/memory/read \\
+  -H "Content-Type: application/json" \\
+  -d '{"agent_id": "my-agent", "token_budget": 256}'
+
+# Try the Memory Console
+# Visit http://localhost:3000/memory-console`}
+            </code>
+          </pre>
+        </div>
+
+        {/* Build Pipeline */}
+        <div className="mt-8 rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-900/80 to-slate-800/50 p-8 backdrop-blur">
+          <h3 className="text-xl font-bold mb-4">Build Your Own Tape</h3>
           <pre className="bg-slate-950/50 rounded-lg p-4 overflow-x-auto text-sm">
             <code className="text-gray-300">
               {`# 1) Create environment

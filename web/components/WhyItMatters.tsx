@@ -1,31 +1,31 @@
-import { Zap, ArrowUpRight, Languages } from 'lucide-react'
+import { Zap, ArrowUpRight, Languages, Brain } from 'lucide-react'
 
 const benefits = [
+  {
+    icon: Brain,
+    title: 'Intelligent Memory Retrieval',
+    points: [
+      'Foveated allocation strategy: 30% early context, 30% relevant, 40% recent',
+      'Delivers the right memories at the right time for agent decision-making',
+      '+46.7pp accuracy improvement over naive truncation under tight budgets',
+    ],
+  },
   {
     icon: Zap,
     title: 'Semantic Compression',
     points: [
       'Replace repeated patterns with short glyph codes',
       'Store one shared phrase-family table instead of millions of near-duplicates',
-      'Keep meaning; drop redundancy',
-    ],
-  },
-  {
-    icon: ArrowUpRight,
-    title: 'Bigger-Feeling Context',
-    points: [
-      'A single glyph token can stand in for an entire motif the model already knows',
-      'Under fixed token budgets, prompts carry more semantic content and longer histories',
-      '2.5-4x more effective context per token budget',
+      '50-70% compression while preserving semantic content',
     ],
   },
   {
     icon: Languages,
     title: 'Cross-Lingual by Design',
     points: [
-      'English, Mandarin, and other languages sharing the same intent land in the same phrase family',
+      'English, Spanish, Chinese, and other languages sharing the same intent cluster together',
       'Glyph IDs act as language-agnostic anchors for retrieval and analysis',
-      '13-7 percentage point gains in cross-lingual retrieval',
+      '90-95% precision across language pairs',
     ],
   },
 ]
@@ -68,16 +68,16 @@ export default function WhyItMatters() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-900/50 to-slate-800/30 p-8 backdrop-blur">
-            <div className="text-4xl font-bold text-primary mb-2">50-70%</div>
+            <div className="text-4xl font-bold text-primary mb-2">+46.7pp</div>
+            <div className="text-gray-400">Accuracy Gain (256 tokens)</div>
+          </div>
+          <div className="rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-900/50 to-slate-800/30 p-8 backdrop-blur">
+            <div className="text-4xl font-bold text-secondary mb-2">50-70%</div>
             <div className="text-gray-400">Compression Ratio</div>
           </div>
           <div className="rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-900/50 to-slate-800/30 p-8 backdrop-blur">
-            <div className="text-4xl font-bold text-secondary mb-2">2.5-4x</div>
-            <div className="text-gray-400">Context Extension</div>
-          </div>
-          <div className="rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-900/50 to-slate-800/30 p-8 backdrop-blur">
-            <div className="text-4xl font-bold text-accent mb-2">+13pp</div>
-            <div className="text-gray-400">Cross-Lingual Retrieval</div>
+            <div className="text-4xl font-bold text-accent mb-2">90-95%</div>
+            <div className="text-gray-400">Cross-Lingual Precision</div>
           </div>
         </div>
       </div>
