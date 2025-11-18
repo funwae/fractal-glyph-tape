@@ -1,4 +1,4 @@
-import { Github, FileText, Map } from 'lucide-react'
+import { Github, FileText, Map, Brain } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -17,28 +17,35 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl sm:text-2xl text-gray-400 mb-4 font-medium">
-          A new substrate for language: dense, fractal, cross-lingual.
+          Agent Memory OS: Dense, fractal, cross-lingual phrase memory.
         </p>
 
         {/* Subheadline */}
         <p className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl mx-auto">
-          Turn billions of repeated sentences into a <span className="text-secondary font-semibold">compact, addressable phrase memory</span>.
-          Fractal Glyph Tape (FGT) clusters phrases, assigns them <span className="text-primary font-semibold">glyph codes</span>, and lays them out on a{' '}
-          <span className="text-accent font-semibold">fractal map</span> that LLMs can actually use.
+          Intelligent memory retrieval for AI agents. Fractal Glyph Tape (FGT) clusters phrases, assigns them <span className="text-primary font-semibold">glyph codes</span>, and uses{' '}
+          <span className="text-accent font-semibold">foveated memory</span> to deliver the right context at the right time—achieving{' '}
+          <span className="text-secondary font-semibold">+46.7pp accuracy gains</span> under tight token budgets.
         </p>
 
         {/* CTAs */}
         <div className="mt-10 flex items-center justify-center gap-x-6 gap-y-4 flex-wrap">
           <a
-            href="/demo"
+            href="/memory-console"
             className="rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-all flex items-center gap-2"
+          >
+            <Brain className="w-5 h-5" />
+            Memory Console
+          </a>
+          <a
+            href="/demo"
+            className="rounded-lg bg-gradient-to-r from-primary to-secondary px-6 py-3 text-base font-semibold text-white shadow-lg hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all flex items-center gap-2"
           >
             <FileText className="w-5 h-5" />
             Try the Demo
           </a>
           <a
             href="/explore"
-            className="rounded-lg bg-gradient-to-r from-primary to-secondary px-6 py-3 text-base font-semibold text-white shadow-lg hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all flex items-center gap-2"
+            className="rounded-lg bg-primary px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all flex items-center gap-2"
           >
             <Map className="w-5 h-5" />
             Explore the Map
@@ -47,7 +54,7 @@ export default function Hero() {
             href="https://github.com/funwae/fractal-glyph-tape"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-primary px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all flex items-center gap-2"
+            className="rounded-lg border border-gray-600 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-all flex items-center gap-2"
           >
             <Github className="w-5 h-5" />
             Get the Code
